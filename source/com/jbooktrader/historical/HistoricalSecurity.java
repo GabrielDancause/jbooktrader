@@ -49,7 +49,7 @@ public class HistoricalSecurity {
     }
 
     public HistoricalSecurity(String symbol, String type, String exchange, HistoricalSecurity.BarSize barSize) {
-        dataMap = new TreeMap<>();
+        dataMap = new TreeMap<Date,HistoricalData>();
         this.symbol = symbol;
         this.type = type;
         this.exchange = exchange;
