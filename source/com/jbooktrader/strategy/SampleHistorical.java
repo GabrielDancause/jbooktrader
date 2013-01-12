@@ -50,7 +50,7 @@ public class SampleHistorical extends StrategyES {
         addParam(SCALE, 5, 25, 1, 16);
         addParam(ENTRY, 55, 120, 1, 92);
         addParam(EXIT, -50, 0, 1, -21);
-        addParam(HIST_EMA, 4, 100, 4, 8);
+        addParam(HIST_EMA, 2, 10, 1, 8);
     }
 
     @Override

@@ -23,6 +23,10 @@ public class HistoricalEMA extends Indicator {
     private HistoricalSecurity historicalSecurity;
     private final int period;
     private Date latestDate; // latest date we have used in our calculation
+
+    private long latestValidTime;
+    private long earliestValidTime;
+
     private int samples;
     private boolean valid;
 
@@ -32,6 +36,7 @@ public class HistoricalEMA extends Indicator {
         this.period = period;
         calcNeeded = true;
         valid = false;
+        latestValidTime = earliestValidTime = 0;
         historicalSecurity = Dispatcher.getInstance().getHistoricalSecurityService().getHistoricalSecurity(symbol,type,exchange, HistoricalSecurity.BarSize.day_1);
     }
 
@@ -44,54 +49,45 @@ public class HistoricalEMA extends Indicator {
         return historicalSecurity;
     }
 
-    private Date getTodayEarliestTime() {
-        long now = marketBook.getSnapshot().getTime();   // use this time, so optimization works
-        Calendar cnow = Calendar.getInstance();
-        cnow.setTimeZone(marketBook.getTimeZone());
-        cnow.setTimeInMillis(now);
-        cnow.set(Calendar.HOUR,0);
-        cnow.set(Calendar.MINUTE,0);
-        cnow.set(Calendar.MILLISECOND,0);
-        now = cnow.getTimeInMillis(); // looking for prior day, so this is the earliest of today
-        return cnow.getTime();
-    }
-
-    public void calculateInitial(Date now) {
+    public void calculateInitial(long now) {
         reset();
         NavigableMap<Date,HistoricalData> map = historicalSecurity.getDatMap();
 
         for (Map.Entry<Date,HistoricalData> entry: map.entrySet()) {
-            if (entry.getKey().getTime() > now.getTime()) {
+            if (entry.getKey().getTime() > now) {
                 break;
             }
             double price = entry.getValue().getClose();
-            value += alpha * (price - value);
-            samples++;
-            latestDate = entry.getKey();
-            LOGGER.log(Level.FINE,String.format("%f, %f",price, value));
+            updateSample(entry.getKey(),entry.getValue().getClose());
         }
     }
 
     private boolean needNewSample() {
-         return (getTodayEarliestTime().getTime() - latestDate.getTime() > DAY_IN_MS);
+         return (marketBook.getSnapshot().getTime() > latestValidTime);
     }
 
     private void applySamplesInRange(Date from, Date to) {
-        SortedMap<Date,HistoricalData> map = historicalSecurity.getRange(from,false,to,false);
+        SortedMap<Date,HistoricalData> map = historicalSecurity.getRange(from,false,to,true);
 
         for(Map.Entry<Date,HistoricalData> entry: map.entrySet()) {  // all should be applied, as range is correct
             double price = entry.getValue().getClose();
-            value += alpha * (price - value);
-            samples++;
-            latestDate = entry.getKey();
-            LOGGER.log(Level.FINE,String.format("%f, %f",price, value));
+            updateSample(entry.getKey(),entry.getValue().getClose());
         }
+    }
+
+    private void updateSample(Date d, double price) {
+        value += alpha * (price - value);
+        samples++;
+        latestDate = d;
+        earliestValidTime = latestDate.getTime() + DAY_IN_MS;
+        latestValidTime = earliestValidTime + DAY_IN_MS;
+        LOGGER.log(Level.FINE,String.format("%f, %f",price, value));
     }
 
     @Override
     public void calculate() {
 
-        Date now = getTodayEarliestTime();
+        long now = marketBook.getSnapshot().getTime();
 
         if (calcNeeded) {  // full recalculation of EMA, first time only
             calculateInitial(now);
@@ -99,7 +95,7 @@ public class HistoricalEMA extends Indicator {
         }
 
         if (needNewSample()) {   // this might run a lot of we don't have enough data, consider peeking at last sample first a a cheaper test
-            applySamplesInRange(latestDate,now);
+            applySamplesInRange(latestDate,new Date(now));
         }
     }
 
