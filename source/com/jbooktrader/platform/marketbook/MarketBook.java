@@ -78,6 +78,10 @@ public class MarketBook {
         return marketSnapshot;
     }
 
+    public TimeZone getTimeZone() {
+        return timeZone;
+    }
+
     public void takeMarketSnapshot(long time) {
         MarketSnapshot snapshot = marketDepth.takeMarketSnapshot(time);
         if (snapshot != null) {

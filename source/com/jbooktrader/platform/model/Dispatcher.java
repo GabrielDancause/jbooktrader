@@ -1,6 +1,8 @@
 package com.jbooktrader.platform.model;
 
 
+import com.jbooktrader.historical.HistoricalSecurityService;
+import com.jbooktrader.historical.impl.HistoricalSecurityFactory;
 import com.jbooktrader.platform.model.ModelListener.*;
 import com.jbooktrader.platform.portfolio.*;
 import com.jbooktrader.platform.report.*;
@@ -25,6 +27,7 @@ public class Dispatcher {
     private PortfolioManager portfolioManager;
     private NTPClock ntpClock;
     private Mode mode;
+    private HistoricalSecurityService historicalSecurityService;
 
     private Dispatcher() {
         listeners = new ArrayList<ModelListener>();
@@ -127,5 +130,13 @@ public class Dispatcher {
         }
 
         fireModelChanged(Event.ModeChanged);
+    }
+
+    public HistoricalSecurityService getHistoricalSecurityService() {
+        String filesep = System.getProperty("file.separator");
+        if (historicalSecurityService == null) {
+            historicalSecurityService = new HistoricalSecurityService(new HistoricalSecurityFactory(JBookTrader.getAppPath()+filesep+"historical"));
+        }
+        return historicalSecurityService;
     }
 }

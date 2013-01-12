@@ -23,7 +23,7 @@ public class JBookTrader {
      * Instantiates the necessary parts of the application: the application model,
      * views, and controller.
      */
-    private JBookTrader() throws JBookTraderException {
+    public JBookTrader() throws JBookTraderException {
         try {
             Dispatcher.getInstance().setReporter();
             for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
@@ -68,4 +68,7 @@ public class JBookTrader {
         return appPath;
     }
 
+    public static void setAppPath(String path) {
+        appPath = path;
+    }
 }
