@@ -1,0 +1,12 @@
+# Each line represents a 1-day market data
+# 1. date in the MMddyy format
+# 2. open 
+# 3. close 
+# 4. high 
+# 5. low 
+# 6. volume (optional)
+
+timeZone=PST
+
+010113,10,20,20,9,1000
+010213,21,20,21,8,2000
