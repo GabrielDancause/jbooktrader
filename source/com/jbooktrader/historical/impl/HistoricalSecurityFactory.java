@@ -32,11 +32,11 @@ public class HistoricalSecurityFactory implements IHistoricalSecurityFactory {
     @Override
     public HistoricalSecurity getInstance(String symbol, String type, String exchange, HistoricalSecurity.BarSize barSize) {
         HistoricalSecurity sec = null;
+        String filepath = path+FILE_SEP+symbol+"-"+exchange+"-"+type+"."+"txt";
         try {
-            String filepath = path+FILE_SEP+symbol+"-"+exchange+"-"+type+"."+"txt";
             sec = new FileBackedHistoricalSecurity(filepath, symbol, type, exchange, barSize);
         } catch (IOException e) {
-            eventReport.report(JBookTrader.APP_NAME, "Can't open file associated with Historical data, not loaded " + symbol + "-" + exchange + "-" + type);
+            eventReport.report(JBookTrader.APP_NAME, "Can't open file associated with Historical data, not loaded " + filepath);
         }
         return sec; // may return null if we throw exception, it means we couldn't create the security
     }
