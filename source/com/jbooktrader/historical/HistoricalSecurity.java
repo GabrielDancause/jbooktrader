@@ -1,6 +1,5 @@
 package com.jbooktrader.historical;
 
-import com.ib.client.Contract;
 import com.jbooktrader.historical.model.HistoricalData;
 
 import java.text.ParseException;
@@ -16,11 +15,13 @@ import java.util.concurrent.ConcurrentSkipListMap;
  */
 public class HistoricalSecurity {
 
-    protected Contract contract;
-    protected ConcurrentNavigableMap<Date,HistoricalData> dataMap;
+    protected TreeMap<Date,HistoricalData> dataMap;
+    protected String symbol;
+    protected String type;
+    protected String exchange;
     protected BarSize barSize;
 
-    protected final SimpleDateFormat formatter;
+    protected TimeZone timezone;
 
     public enum BarSize {
         sec1("1 sec"),
@@ -47,14 +48,29 @@ public class HistoricalSecurity {
         }
     }
 
-
-    public HistoricalSecurity() {
-        formatter = new SimpleDateFormat("yyyyMMdd");
-        dataMap = new ConcurrentSkipListMap<Date, HistoricalData>();
+    public HistoricalSecurity(String symbol, String type, String exchange, HistoricalSecurity.BarSize barSize) {
+        dataMap = new TreeMap<>();
+        this.symbol = symbol;
+        this.type = type;
+        this.exchange = exchange;
+        this.timezone = TimeZone.getTimeZone("America/New_York");    // default to this
+        this.barSize = barSize;
     }
 
-    public Contract getContract() {
-        return contract;
+    public String getSymbol() {
+        return symbol;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getExchange() {
+        return exchange;
+    }
+
+    public TimeZone getTimezone() {
+        return timezone;
     }
 
     public boolean isValid(Date sStart, Date sEnd) {
@@ -68,14 +84,6 @@ public class HistoricalSecurity {
         }
         return dataMap.get(day);
 
-    }
-
-    public Date stringToDate(String d) throws ParseException {
-        return formatter.parse(d);
-    }
-
-    public String dateToString(Date d) {
-        return formatter.format(d);
     }
 
     public void insertData(HistoricalData data) {
@@ -96,6 +104,14 @@ public class HistoricalSecurity {
 
     public SortedMap<Date,HistoricalData> getRange(Date start,boolean sinc, Date end, boolean einc) {
         return dataMap.subMap(start,sinc,end,einc);
+    }
+
+    public NavigableMap<Date,HistoricalData> getDescendingMap() {
+        return dataMap.descendingMap();
+    }
+
+    public TreeMap<Date,HistoricalData> getDatMap() {
+        return dataMap;
     }
 
     public BarSize getBarSize() {

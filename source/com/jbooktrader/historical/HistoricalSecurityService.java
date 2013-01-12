@@ -17,31 +17,28 @@ public class HistoricalSecurityService {
     private final String HISTORICAL_DIR = "historical";
 
     private List<HistoricalSecurity> securitiesList;
+    private IHistoricalSecurityFactory historicalSecurityFactory;
 
-    public HistoricalSecurityService() {
+    public HistoricalSecurityService(IHistoricalSecurityFactory factory) {
         securitiesList = new ArrayList<HistoricalSecurity>();
+        historicalSecurityFactory = factory;
     }
 
     public HistoricalSecurity getHistoricalSecurity(String symbol, String type, String exchange, HistoricalSecurity.BarSize barSize) {
         for (HistoricalSecurity s: securitiesList) {
-            Contract c = s.getContract();
-            if (c.m_symbol.equals(symbol) && c.m_secType.equals(type) && c.m_exchange.equals(exchange) && s.getBarSize().equals(barSize)) {
+            if (s.getSymbol().equals(symbol) && s.getType().equals(type) && s.getExchange().equals(exchange) && s.getBarSize().equals(barSize)) {
                 return s;
             }
         }
-        return null;
+        // see if we can create a new one for the consumer
+        HistoricalSecurity newSec = historicalSecurityFactory.getInstance(symbol,type,exchange,barSize);
+        if (newSec != null) {
+            securitiesList.add(newSec);
+        }
+        return newSec;
     }
 
-    public void addHistoricalSecurity(HistoricalSecurity sec) throws JBookTraderException {
-        HistoricalSecurity existing = getHistoricalSecurity(sec.getContract().m_symbol, sec.getContract().m_secType,sec.getContract().m_exchange, sec.getBarSize());
-        if (existing != null) {
-            throw new JBookTraderException("Error, HistoricalSecurity already existsed, this should never happen");
-        }
-        if (sec.getBarSize() != HistoricalSecurity.BarSize.day_1) {
-            throw new JBookTraderException("Error, we only support 1day data at this time");
-        }
-        securitiesList.add(sec);
-    }
+
 
 
 

@@ -9,18 +9,19 @@ import java.util.Date;
  *
  *
  * Model object which represents a single day in historical data
+ * immutable
  */
 public final class HistoricalData {
 
     private final Date date;
-    private final int open;
-    private final int high;
-    private final int low;
-    private final int close;
+    private final double open;
+    private final double high;
+    private final double low;
+    private final double close;
     private final int volume;
-    private final Boolean hasGaps;
+    private final boolean hasGaps;
 
-    public HistoricalData(Date date, int open, int high, int low, int close, int volume, Boolean hasGaps) {
+    public HistoricalData(Date date, double open, double high, double low, double close, int volume, boolean hasGaps) {
         this.date = date;
         this.open = open;
         this.high = high;
@@ -34,19 +35,19 @@ public final class HistoricalData {
         return new Date(date.getTime());
     }
 
-    public int getOpen() {
+    public double getOpen() {
         return open;
     }
 
-    public int getHigh() {
+    public double getHigh() {
         return high;
     }
 
-    public int getLow() {
+    public double getLow() {
         return low;
     }
 
-    public int getClose() {
+    public double getClose() {
         return close;
     }
 
