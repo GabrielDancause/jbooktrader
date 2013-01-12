@@ -12,7 +12,7 @@ import java.io.IOException;
  */
 public class TestHistoricalDataConverter {
 
-    @Test
+ //  @Test
     public void testConversion() throws IOException {
         HistoricalDataConverter hdc = new HistoricalDataConverter();
 

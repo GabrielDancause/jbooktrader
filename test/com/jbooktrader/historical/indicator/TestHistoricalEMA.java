@@ -38,6 +38,7 @@ public class TestHistoricalEMA {
         assertEquals(3.0625,value);
     }
 
+    @Test
     public void testHistoricalEMAShortOnSamplesForPeriod() throws JBookTraderException {
         JBookTrader.setAppPath("./test");
         JBookTrader app = new JBookTrader();
@@ -63,11 +64,17 @@ public class TestHistoricalEMA {
         c.set(2012,Calendar.DECEMBER,1,0,0,0); // some older date, which actually represents a gap in prior data
         HistoricalData hd2 = new HistoricalData(c.getTime(),10,0,0,0,0,false);
         he.getHistoricalSecurity().insertData(hd2);
-        // we should be valid now, however we do have a gap.  We don't check for gaps yet, so it is used
+        // still invalid, old data was added after we did initial calc
+        // TODO: Make calc go back and query for older data if we don't have enough samples, only if we need this support
         he.calculate();
+        assertTrue(!he.isValid());
+
+        c.set(2013,Calendar.JANUARY,6,1,1,1); // some time in the trading day on the 6th
+        MarketSnapshot snap = new MarketSnapshot(c.getTimeInMillis(),0,10,0);
+        mb.setSnapshot(snap);
+
+        he.calculate(); // should trigger an update of the data for the 5th, added above
         assertTrue(he.isValid());
-
-
     }
 
 
