@@ -80,8 +80,11 @@ public class ClassFinder {
     public static Strategy getInstance(String name) throws JBookTraderException {
         try {
             String className = "com.jbooktrader.strategy." + name;
-            Class<? extends Strategy> clazz = Class.forName(className).asSubclass(Strategy.class);
+            Class<?> clazz = Class.forName(className);  // changed in case other classes are in com.jbooktrader.strategy
             if (Modifier.isAbstract(clazz.getModifiers())) {
+                return null;
+            }
+            if (!Strategy.class.isAssignableFrom(clazz)) {  // now check to see if it extends Strategy, otherwise ignore it
                 return null;
             }
 
