@@ -11,7 +11,7 @@ import com.jbooktrader.strategy.base.*;
 /**
  *
  */
-public class Sample extends StrategyES {
+public class Test extends StrategyQQQ {
 
     // Technical indicators
     private Indicator balanceVelocityInd, priceVelocityInd;
@@ -26,7 +26,7 @@ public class Sample extends StrategyES {
     private final int entry, exit, scale;
 
 
-    public Sample(StrategyParams optimizationParams) throws JBookTraderException {
+    public Test(StrategyParams optimizationParams) throws JBookTraderException {
         super(optimizationParams);
 
         entry = getParam(ENTRY);

@@ -1,0 +1,558 @@
+<html><table border="1" cellpadding="2" cellspacing="0" width=100%>
+<tr><TH WIDTH="80">Date</th><TH WIDTH="120">Time</th><TH WIDTH="130">Reporter</th><th>Message</th></tr>
+<tr><td>07/07/15</td><td>17:56:31.690</td><td>JBookTrader</td><td>New Report Started. JBookTrader version 9.01</td></tr>
+<tr><td>07/07/15</td><td>17:56:31.703</td><td>JBookTrader</td><td>All times will be reported in the local time zone: America/Montreal, Heure normale de l'Est</td></tr>
+<tr><td>07/07/15</td><td>17:59:59.288</td><td>JBookTrader</td><td>Time host: pool.ntp.org, name: 129.6.15.29, stratum: 2, type: NTP, precision: 0.1192 microseconds</td></tr>
+<tr><td>07/07/15</td><td>17:59:59.290</td><td>JBookTrader</td><td>NTP clock updated. Offset: 11 ms</td></tr>
+<tr><td>07/07/15</td><td>17:59:59.303</td><td>JBookTrader</td><td>Running mode changed to: Forward Testing</td></tr>
+<tr><td>07/07/15</td><td>17:59:59.314</td><td>JBookTrader</td><td>Connecting to TWS</td></tr>
+<tr><td>07/07/15</td><td>17:59:59.512</td><td>JBookTrader</td><td>Connected to TWS</td></tr>
+<tr><td>07/07/15</td><td>17:59:59.527</td><td>IB API</td><td>2104: Market data farm connection is OK:cashfarm</td></tr>
+<tr><td>07/07/15</td><td>17:59:59.528</td><td>IB API</td><td>2104: Market data farm connection is OK:cafarm</td></tr>
+<tr><td>07/07/15</td><td>17:59:59.528</td><td>IB API</td><td>2104: Market data farm connection is OK:usfarm.us</td></tr>
+<tr><td>07/07/15</td><td>17:59:59.528</td><td>IB API</td><td>2104: Market data farm connection is OK:usfarm</td></tr>
+<tr><td>07/07/15</td><td>17:59:59.531</td><td>IB API</td><td>2106: HMDS data farm connection is OK:cashhmds</td></tr>
+<tr><td>07/07/15</td><td>17:59:59.531</td><td>IB API</td><td>2106: HMDS data farm connection is OK:ushmds</td></tr>
+<tr><td>07/07/15</td><td>17:59:59.604</td><td>IB API</td><td>2100: API client has been unsubscribed from account data.</td></tr>
+<tr><td>07/07/15</td><td>17:59:59.673</td><td>JBookTrader</td><td>Monitoring server started</td></tr>
+<tr><td>07/07/15</td><td>18:00:00.242</td><td>IB API</td><td>2104: Market data farm connection is OK:usfuture</td></tr>
+<tr><td>07/07/15</td><td>18:00:00.316</td><td>IB API</td><td>354: Requested market data is not subscribed.Error&GLOBEX/FUT/Top&GLOBEX/FUT/Top (for id 4)</td></tr>
+<tr><td>07/07/15</td><td>18:00:01.413</td><td>JBookTrader</td><td>org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1401)
+	at org.apache.commons.mail.Email.send(Email.java:1428)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:61)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:41)
+	at com.jbooktrader.platform.trader.Trader.error(Trader.java:216)
+	at com.ib.client.EClientSocket.error(EClientSocket.java:1890)
+	at com.ib.client.EReader.processMsg(EReader.java:331)
+	at com.ib.client.EReader.run(EReader.java:69)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 f63sm20284qhe.34 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1391)
+	... 7 more
+</td></tr>
+<tr><td>07/07/15</td><td>18:00:01.414</td><td>IB API</td><td>354: Requested market data is not subscribed.Error&GLOBEX/FUT/Top&GLOBEX/FUT/Top (for id 7)</td></tr>
+<tr><td>07/07/15</td><td>18:00:01.745</td><td>JBookTrader</td><td>org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1401)
+	at org.apache.commons.mail.Email.send(Email.java:1428)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:61)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:41)
+	at com.jbooktrader.platform.trader.Trader.error(Trader.java:216)
+	at com.ib.client.EClientSocket.error(EClientSocket.java:1890)
+	at com.ib.client.EReader.processMsg(EReader.java:331)
+	at com.ib.client.EReader.run(EReader.java:69)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 b196sm11912314qka.14 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1391)
+	... 7 more
+</td></tr>
+<tr><td>07/07/15</td><td>18:00:01.745</td><td>IB API</td><td>2108: Market data farm connection is inactive but should be available upon demand.usfuture</td></tr>
+<tr><td>07/07/15</td><td>18:00:02.150</td><td>JBookTrader</td><td>org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1401)
+	at org.apache.commons.mail.Email.send(Email.java:1428)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:61)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:41)
+	at com.jbooktrader.platform.trader.Trader.error(Trader.java:216)
+	at com.ib.client.EClientSocket.error(EClientSocket.java:1890)
+	at com.ib.client.EReader.processMsg(EReader.java:331)
+	at com.ib.client.EReader.run(EReader.java:69)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 i197sm19158qhc.36 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1391)
+	... 7 more
+</td></tr>
+</table><br><table border="1" cellpadding="2" cellspacing="0" width=100%>
+<tr><TH WIDTH="80">Date</th><TH WIDTH="120">Time</th><TH WIDTH="130">Reporter</th><th>Message</th></tr>
+<tr><td>07/07/15</td><td>18:01:09.962</td><td>JBookTrader</td><td>New Report Started. JBookTrader version 9.01</td></tr>
+<tr><td>07/07/15</td><td>18:01:09.976</td><td>JBookTrader</td><td>All times will be reported in the local time zone: America/Montreal, Heure normale de l'Est</td></tr>
+</table><br><table border="1" cellpadding="2" cellspacing="0" width=100%>
+<tr><TH WIDTH="80">Date</th><TH WIDTH="120">Time</th><TH WIDTH="130">Reporter</th><th>Message</th></tr>
+<tr><td>07/07/15</td><td>18:13:26.118</td><td>JBookTrader</td><td>New Report Started. JBookTrader version 9.01</td></tr>
+<tr><td>07/07/15</td><td>18:13:26.132</td><td>JBookTrader</td><td>All times will be reported in the local time zone: America/Montreal, Heure normale de l'Est</td></tr>
+</table><br><table border="1" cellpadding="2" cellspacing="0" width=100%>
+<tr><TH WIDTH="80">Date</th><TH WIDTH="120">Time</th><TH WIDTH="130">Reporter</th><th>Message</th></tr>
+<tr><td>07/07/15</td><td>18:14:05.504</td><td>JBookTrader</td><td>New Report Started. JBookTrader version 9.01</td></tr>
+<tr><td>07/07/15</td><td>18:14:05.514</td><td>JBookTrader</td><td>All times will be reported in the local time zone: America/Montreal, Heure normale de l'Est</td></tr>
+<tr><td>07/07/15</td><td>18:14:14.539</td><td>JBookTrader</td><td>Running mode changed to: Back Testing</td></tr>
+</table><br><table border="1" cellpadding="2" cellspacing="0" width=100%>
+<tr><TH WIDTH="80">Date</th><TH WIDTH="120">Time</th><TH WIDTH="130">Reporter</th><th>Message</th></tr>
+<tr><td>07/07/15</td><td>18:23:04.220</td><td>JBookTrader</td><td>New Report Started. JBookTrader version 9.01</td></tr>
+<tr><td>07/07/15</td><td>18:23:04.227</td><td>JBookTrader</td><td>All times will be reported in the local time zone: America/Montreal, Heure normale de l'Est</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.579</td><td>JBookTrader</td><td>Time host: pool.ntp.org, name: 206.108.0.131, stratum: 2, type: NTP, precision: 0.9537 microseconds</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.579</td><td>JBookTrader</td><td>NTP clock updated. Offset: 8 ms</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.589</td><td>JBookTrader</td><td>Running mode changed to: Forward Testing</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.597</td><td>JBookTrader</td><td>Connecting to TWS</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.622</td><td>JBookTrader</td><td>Connected to TWS</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.623</td><td>IB API</td><td>2104: Market data farm connection is OK:usfuture</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.624</td><td>IB API</td><td>2104: Market data farm connection is OK:cashfarm</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.625</td><td>IB API</td><td>2104: Market data farm connection is OK:cafarm</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.625</td><td>IB API</td><td>2104: Market data farm connection is OK:usfarm.us</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.626</td><td>IB API</td><td>2104: Market data farm connection is OK:usfarm</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.626</td><td>IB API</td><td>2106: HMDS data farm connection is OK:ilhmds</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.626</td><td>IB API</td><td>2106: HMDS data farm connection is OK:cashhmds</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.627</td><td>IB API</td><td>2106: HMDS data farm connection is OK:ushmds</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.652</td><td>IB API</td><td>2100: API client has been unsubscribed from account data.</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.727</td><td>JBookTrader</td><td>Monitoring server started</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.730</td><td>JBookTrader</td><td>Requested contract details for instrument QQQ-SMART-STK</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.731</td><td>JBookTrader</td><td>Requested book data for instrument QQQ-SMART-STK</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.731</td><td>JBookTrader</td><td>Requested market data for instrument QQQ-SMART-STK</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.734</td><td>Test</td><td>Strategy started. Trading schedule: 10:20 to 15:25 (America/New_York)</td></tr>
+<tr><td>07/07/15</td><td>18:23:21.786</td><td>IB API</td><td>Contract details:<br>ID: 2<br>Trading class: NMS<br>Exchanges: SMART,CBOE,ISE,CHX,ARCA,ISLAND,IBSX,DRCTEDGE,BEX,BATS,EDGEA,LAVA,CSFBALGO,JEFFALGO,BYX,IEX,PSX<br>Long name: POWERSHARES QQQ TRUST SERIES<br>Market name: NMS<br>Minimum tick: 0.01<br>Contract month: null<br>Time zone id: EST5EDT<br>Trading hours: 20150707:0400-2000;20150708:0400-2000<br>Liquid hours: 20150707:0930-1600;20150708:0930-1600<br></td></tr>
+<tr><td>07/07/15</td><td>18:23:21.826</td><td>IB API</td><td>10092: Deep market data is not supported for this combination of security type/exchange (for id 2)</td></tr>
+<tr><td>07/07/15</td><td>18:23:23.033</td><td>JBookTrader</td><td>org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1401)
+	at org.apache.commons.mail.Email.send(Email.java:1428)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:61)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:41)
+	at com.jbooktrader.platform.trader.Trader.error(Trader.java:216)
+	at com.ib.client.EClientSocket.error(EClientSocket.java:1890)
+	at com.ib.client.EReader.processMsg(EReader.java:331)
+	at com.ib.client.EReader.run(EReader.java:69)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 l74sm164586qgd.7 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1391)
+	... 7 more
+</td></tr>
+<tr><td>07/07/15</td><td>18:23:23.034</td><td>IB API</td><td>354: Requested market data is not subscribed.QQQ NASDAQ.NMS/TOP/ALL (for id 2)</td></tr>
+<tr><td>07/07/15</td><td>18:23:23.388</td><td>JBookTrader</td><td>org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1401)
+	at org.apache.commons.mail.Email.send(Email.java:1428)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:61)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:41)
+	at com.jbooktrader.platform.trader.Trader.error(Trader.java:216)
+	at com.ib.client.EClientSocket.error(EClientSocket.java:1890)
+	at com.ib.client.EReader.processMsg(EReader.java:331)
+	at com.ib.client.EReader.run(EReader.java:69)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 d8sm11946472qka.21 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1391)
+	... 7 more
+</td></tr>
+</table><br><table border="1" cellpadding="2" cellspacing="0" width=100%>
+<tr><TH WIDTH="80">Date</th><TH WIDTH="120">Time</th><TH WIDTH="130">Reporter</th><th>Message</th></tr>
+<tr><td>07/09/15</td><td>11:44:06.932</td><td>JBookTrader</td><td>New Report Started. JBookTrader version 9.01</td></tr>
+<tr><td>07/09/15</td><td>11:44:06.945</td><td>JBookTrader</td><td>All times will be reported in the local time zone: America/Montreal, Heure normale de l'Est</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.858</td><td>JBookTrader</td><td>Time host: pool.ntp.org, name: PPS, stratum: 1, type: NTP, precision: 0.1192 microseconds</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.859</td><td>JBookTrader</td><td>NTP clock updated. Offset: -264 ms</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.873</td><td>JBookTrader</td><td>Running mode changed to: Forward Testing</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.610</td><td>JBookTrader</td><td>Connecting to TWS</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.674</td><td>JBookTrader</td><td>Connected to TWS</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.680</td><td>IB API</td><td>2104: Market data farm connection is OK:usfuture</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.681</td><td>IB API</td><td>2104: Market data farm connection is OK:cashfarm</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.682</td><td>IB API</td><td>2104: Market data farm connection is OK:cafarm</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.682</td><td>IB API</td><td>2104: Market data farm connection is OK:usfarm.us</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.683</td><td>IB API</td><td>2104: Market data farm connection is OK:usfarm</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.684</td><td>IB API</td><td>2106: HMDS data farm connection is OK:ushmds</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.687</td><td>IB API</td><td>Msg ID: 1436416249 Msg Type: 1 Msg: ======================================================
+To HKFE,SEHK traders:
+Thu Jul  9 11:36:08 2015 EST
+HKEx has announced that there will be no after hours futures trading in its market today due to the issuance of Typhoon Signal No 8.
+For trading arrangement for HKFE and SEHK, please refer to the following HKEx website link:
+http://www.hkex.com.hk/eng/market/typhoons/tradingarrangement.htm
+For more details regarding weather conditions in Hong Kong, please refer to the HK observatory website for updates:
+http://www.weather.gov.hk/contente.htm Exchange: HKFE,SEHK</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.732</td><td>IB API</td><td>2100: API client has been unsubscribed from account data.</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.832</td><td>JBookTrader</td><td>Monitoring server started</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.837</td><td>JBookTrader</td><td>Requested contract details for instrument QQQ-SMART-STK</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.838</td><td>JBookTrader</td><td>Requested book data for instrument QQQ-SMART-STK</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.839</td><td>JBookTrader</td><td>Requested market data for instrument QQQ-SMART-STK</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.841</td><td>Test</td><td>Strategy started. Trading schedule: 10:20 to 15:25 (America/New_York)</td></tr>
+<tr><td>07/09/15</td><td>11:45:48.895</td><td>IB API</td><td>Contract details:<br>ID: 2<br>Trading class: NMS<br>Exchanges: SMART,CBOE,ISE,CHX,ARCA,ISLAND,IBSX,DRCTEDGE,BEX,BATS,EDGEA,LAVA,CSFBALGO,JEFFALGO,BYX,IEX,PSX<br>Long name: POWERSHARES QQQ TRUST SERIES<br>Market name: NMS<br>Minimum tick: 0.01<br>Contract month: null<br>Time zone id: EST5EDT<br>Trading hours: 20150709:0400-2000;20150710:0400-2000<br>Liquid hours: 20150709:0930-1600;20150710:0930-1600<br></td></tr>
+<tr><td>07/09/15</td><td>11:45:48.946</td><td>IB API</td><td>10092: Deep market data is not supported for this combination of security type/exchange (for id 2)</td></tr>
+<tr><td>07/09/15</td><td>11:45:50.124</td><td>JBookTrader</td><td>org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1401)
+	at org.apache.commons.mail.Email.send(Email.java:1428)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:61)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:41)
+	at com.jbooktrader.platform.trader.Trader.error(Trader.java:216)
+	at com.ib.client.EClientSocket.error(EClientSocket.java:1890)
+	at com.ib.client.EReader.processMsg(EReader.java:331)
+	at com.ib.client.EReader.run(EReader.java:69)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 u95sm3864831qge.16 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1391)
+	... 7 more
+</td></tr>
+<tr><td>07/09/15</td><td>11:45:50.124</td><td>IB API</td><td>354: Requested market data is not subscribed.QQQ NASDAQ.NMS/TOP/ALL (for id 2)</td></tr>
+<tr><td>07/09/15</td><td>11:45:50.544</td><td>JBookTrader</td><td>org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1401)
+	at org.apache.commons.mail.Email.send(Email.java:1428)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:61)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:41)
+	at com.jbooktrader.platform.trader.Trader.error(Trader.java:216)
+	at com.ib.client.EClientSocket.error(EClientSocket.java:1890)
+	at com.ib.client.EReader.processMsg(EReader.java:331)
+	at com.ib.client.EReader.run(EReader.java:69)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 44sm2111440qgg.2 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1391)
+	... 7 more
+</td></tr>
+<tr><td>07/09/15</td><td>11:46:15.076</td><td>IB API</td><td>2106: HMDS data farm connection is OK:cashhmds</td></tr>
+<tr><td>07/09/15</td><td>11:59:16.090</td><td>IB API</td><td>Msg ID: 1436428780 Msg Type: 1 Msg: ======================================================
+To SGX traders:
+Thu Jul  9 11:59:14 2015 EST
+Due to a typhoon and the closure of the underlying market in Taiwan, SGX will close the MSCI Taiwan Index Future & Option markets for both T and T+1 sessions on 10 July 2015. Exchange: SGX</td></tr>
+<tr><td>07/09/15</td><td>12:18:26.966</td><td>IB API</td><td>1100: Connectivity between IB and Trader Workstation has been lost.</td></tr>
+<tr><td>07/09/15</td><td>12:18:27.571</td><td>JBookTrader</td><td>org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1401)
+	at org.apache.commons.mail.Email.send(Email.java:1428)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:61)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:41)
+	at com.jbooktrader.platform.trader.Trader.error(Trader.java:216)
+	at com.ib.client.EClientSocket.error(EClientSocket.java:1890)
+	at com.ib.client.EReader.processMsg(EReader.java:331)
+	at com.ib.client.EReader.run(EReader.java:69)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 r75sm3598593qkh.6 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1391)
+	... 7 more
+</td></tr>
+<tr><td>07/09/15</td><td>12:18:29.681</td><td>IB API</td><td>1102: Connectivity between IB and Trader Workstation has been restored - data maintained.</td></tr>
+<tr><td>07/09/15</td><td>12:18:30.023</td><td>JBookTrader</td><td>org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1401)
+	at org.apache.commons.mail.Email.send(Email.java:1428)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:61)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:41)
+	at com.jbooktrader.platform.trader.Trader.error(Trader.java:216)
+	at com.ib.client.EClientSocket.error(EClientSocket.java:1890)
+	at com.ib.client.EReader.processMsg(EReader.java:331)
+	at com.ib.client.EReader.run(EReader.java:69)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 f123sm3785326qhe.42 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1391)
+	... 7 more
+</td></tr>
+<tr><td>07/09/15</td><td>12:19:06.612</td><td>IB API</td><td>2105: HMDS data farm connection is broken:ushmds</td></tr>
+<tr><td>07/09/15</td><td>12:19:06.683</td><td>IB API</td><td>2108: Market data farm connection is inactive but should be available upon demand.usfarm.us</td></tr>
+<tr><td>07/09/15</td><td>12:19:07.100</td><td>JBookTrader</td><td>org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1401)
+	at org.apache.commons.mail.Email.send(Email.java:1428)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:61)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:41)
+	at com.jbooktrader.platform.trader.Trader.error(Trader.java:216)
+	at com.ib.client.EClientSocket.error(EClientSocket.java:1890)
+	at com.ib.client.EReader.processMsg(EReader.java:331)
+	at com.ib.client.EReader.run(EReader.java:69)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 t33sm3919333qge.19 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1391)
+	... 7 more
+</td></tr>
+<tr><td>07/09/15</td><td>12:19:07.100</td><td>IB API</td><td>2106: HMDS data farm connection is OK:ushmds</td></tr>
+<tr><td>07/09/15</td><td>12:19:07.554</td><td>IB API</td><td>2103: Market data farm connection is broken:cafarm</td></tr>
+<tr><td>07/09/15</td><td>12:19:08.273</td><td>IB API</td><td>2104: Market data farm connection is OK:cafarm</td></tr>
+<tr><td>07/09/15</td><td>12:19:08.611</td><td>IB API</td><td>2103: Market data farm connection is broken:usfarm</td></tr>
+<tr><td>07/09/15</td><td>12:19:08.895</td><td>IB API</td><td>2104: Market data farm connection is OK:usfarm.us</td></tr>
+<tr><td>07/09/15</td><td>12:19:08.998</td><td>IB API</td><td>2103: Market data farm connection is broken:cashfarm</td></tr>
+<tr><td>07/09/15</td><td>12:19:09.094</td><td>IB API</td><td>2103: Market data farm connection is broken:usfuture</td></tr>
+<tr><td>07/09/15</td><td>12:19:09.178</td><td>IB API</td><td>2104: Market data farm connection is OK:cashfarm</td></tr>
+<tr><td>07/09/15</td><td>12:19:09.332</td><td>IB API</td><td>2104: Market data farm connection is OK:usfarm</td></tr>
+<tr><td>07/09/15</td><td>12:19:09.480</td><td>IB API</td><td>2104: Market data farm connection is OK:usfuture</td></tr>
+<tr><td>07/09/15</td><td>12:19:13.044</td><td>IB API</td><td>2105: HMDS data farm connection is broken:cashhmds</td></tr>
+<tr><td>07/09/15</td><td>12:19:13.221</td><td>IB API</td><td>2106: HMDS data farm connection is OK:cashhmds</td></tr>
+<tr><td>07/09/15</td><td>12:19:29.086</td><td>IB API</td><td>354: Requested market data is not subscribed.ES SEP'15/TOP/ALL (for id 5)</td></tr>
+<tr><td>07/09/15</td><td>12:19:29.447</td><td>JBookTrader</td><td>org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1401)
+	at org.apache.commons.mail.Email.send(Email.java:1428)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:61)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:41)
+	at com.jbooktrader.platform.trader.Trader.error(Trader.java:216)
+	at com.ib.client.EClientSocket.error(EClientSocket.java:1890)
+	at com.ib.client.EReader.processMsg(EReader.java:331)
+	at com.ib.client.EReader.run(EReader.java:69)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 w126sm3585642qkw.32 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1391)
+	... 7 more
+</td></tr>
+<tr><td>07/09/15</td><td>12:19:29.448</td><td>IB API</td><td>354: Requested market data is not subscribed.ES DEC'15/TOP/ALL (for id 8)</td></tr>
+<tr><td>07/09/15</td><td>12:19:29.764</td><td>JBookTrader</td><td>org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1401)
+	at org.apache.commons.mail.Email.send(Email.java:1428)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:61)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:41)
+	at com.jbooktrader.platform.trader.Trader.error(Trader.java:216)
+	at com.ib.client.EClientSocket.error(EClientSocket.java:1890)
+	at com.ib.client.EReader.processMsg(EReader.java:331)
+	at com.ib.client.EReader.run(EReader.java:69)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 f123sm3786870qhe.42 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1391)
+	... 7 more
+</td></tr>
+</table><br><table border="1" cellpadding="2" cellspacing="0" width=100%>
+<tr><TH WIDTH="80">Date</th><TH WIDTH="120">Time</th><TH WIDTH="130">Reporter</th><th>Message</th></tr>
+<tr><td>07/09/15</td><td>12:20:21.577</td><td>JBookTrader</td><td>New Report Started. JBookTrader version 9.01</td></tr>
+<tr><td>07/09/15</td><td>12:20:21.591</td><td>JBookTrader</td><td>All times will be reported in the local time zone: America/Montreal, Heure normale de l'Est</td></tr>
+<tr><td>07/09/15</td><td>12:20:32.636</td><td>JBookTrader</td><td>Time host: pool.ntp.org, name: 24.150.203.150, stratum: 2, type: NTP, precision: 0.0596 microseconds</td></tr>
+<tr><td>07/09/15</td><td>12:20:32.637</td><td>JBookTrader</td><td>NTP clock updated. Offset: 3 ms</td></tr>
+<tr><td>07/09/15</td><td>12:20:32.648</td><td>JBookTrader</td><td>Running mode changed to: Trading</td></tr>
+<tr><td>07/09/15</td><td>12:20:32.652</td><td>JBookTrader</td><td>Connecting to TWS</td></tr>
+<tr><td>07/09/15</td><td>12:20:32.682</td><td>JBookTrader</td><td>Connected to TWS</td></tr>
+<tr><td>07/09/15</td><td>12:20:32.683</td><td>IB API</td><td>2104: Market data farm connection is OK:usfuture</td></tr>
+<tr><td>07/09/15</td><td>12:20:32.683</td><td>IB API</td><td>2104: Market data farm connection is OK:cashfarm</td></tr>
+<tr><td>07/09/15</td><td>12:20:32.684</td><td>IB API</td><td>2104: Market data farm connection is OK:cafarm</td></tr>
+<tr><td>07/09/15</td><td>12:20:32.684</td><td>IB API</td><td>2104: Market data farm connection is OK:usfarm.us</td></tr>
+<tr><td>07/09/15</td><td>12:20:32.684</td><td>IB API</td><td>2104: Market data farm connection is OK:usfarm</td></tr>
+<tr><td>07/09/15</td><td>12:20:32.685</td><td>IB API</td><td>2106: HMDS data farm connection is OK:cashhmds</td></tr>
+<tr><td>07/09/15</td><td>12:20:32.685</td><td>IB API</td><td>2106: HMDS data farm connection is OK:ushmds</td></tr>
+<tr><td>07/09/15</td><td>12:20:32.687</td><td>IB API</td><td>Msg ID: 1436416249 Msg Type: 1 Msg: ======================================================
+To HKFE,SEHK traders:
+Thu Jul  9 11:36:08 2015 EST
+HKEx has announced that there will be no after hours futures trading in its market today due to the issuance of Typhoon Signal No 8.
+For trading arrangement for HKFE and SEHK, please refer to the following HKEx website link:
+http://www.hkex.com.hk/eng/market/typhoons/tradingarrangement.htm
+For more details regarding weather conditions in Hong Kong, please refer to the HK observatory website for updates:
+http://www.weather.gov.hk/contente.htm Exchange: HKFE,SEHK</td></tr>
+<tr><td>07/09/15</td><td>12:20:32.688</td><td>IB API</td><td>Msg ID: 1436428780 Msg Type: 1 Msg: ======================================================
+To SGX traders:
+Thu Jul  9 11:59:14 2015 EST
+Due to a typhoon and the closure of the underlying market in Taiwan, SGX will close the MSCI Taiwan Index Future & Option markets for both T and T+1 sessions on 10 July 2015. Exchange: SGX</td></tr>
+<tr><td>07/09/15</td><td>12:20:32.705</td><td>IB API</td><td>2100: API client has been unsubscribed from account data.</td></tr>
+<tr><td>07/09/15</td><td>12:20:35.900</td><td>JBookTrader</td><td>Monitoring server started</td></tr>
+<tr><td>07/09/15</td><td>12:20:35.903</td><td>JBookTrader</td><td>Requested contract details for instrument QQQ-SMART-STK</td></tr>
+<tr><td>07/09/15</td><td>12:20:35.903</td><td>JBookTrader</td><td>Requested book data for instrument QQQ-SMART-STK</td></tr>
+<tr><td>07/09/15</td><td>12:20:35.904</td><td>JBookTrader</td><td>Requested market data for instrument QQQ-SMART-STK</td></tr>
+<tr><td>07/09/15</td><td>12:20:35.906</td><td>Test</td><td>Strategy started. Trading schedule: 10:20 to 15:25 (America/New_York)</td></tr>
+<tr><td>07/09/15</td><td>12:20:35.957</td><td>IB API</td><td>Contract details:<br>ID: 2<br>Trading class: NMS<br>Exchanges: SMART,CBOE,ISE,CHX,ARCA,ISLAND,IBSX,DRCTEDGE,BEX,BATS,EDGEA,LAVA,CSFBALGO,JEFFALGO,BYX,IEX,PSX<br>Long name: POWERSHARES QQQ TRUST SERIES<br>Market name: NMS<br>Minimum tick: 0.01<br>Contract month: null<br>Time zone id: EST5EDT<br>Trading hours: 20150709:0400-2000;20150710:0400-2000<br>Liquid hours: 20150709:0930-1600;20150710:0930-1600<br></td></tr>
+<tr><td>07/09/15</td><td>12:20:35.982</td><td>IB API</td><td>10092: Deep market data is not supported for this combination of security type/exchange (for id 2)</td></tr>
+<tr><td>07/09/15</td><td>12:20:37.015</td><td>JBookTrader</td><td>org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1401)
+	at org.apache.commons.mail.Email.send(Email.java:1428)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:61)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:41)
+	at com.jbooktrader.platform.trader.Trader.error(Trader.java:216)
+	at com.ib.client.EClientSocket.error(EClientSocket.java:1890)
+	at com.ib.client.EReader.processMsg(EReader.java:331)
+	at com.ib.client.EReader.run(EReader.java:69)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 q19sm3793637qha.32 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1391)
+	... 7 more
+</td></tr>
+<tr><td>07/09/15</td><td>12:20:37.016</td><td>IB API</td><td>354: Requested market data is not subscribed.Error&BEST/STK/Top&BEST/STK/Top (for id 2)</td></tr>
+<tr><td>07/09/15</td><td>12:20:37.393</td><td>JBookTrader</td><td>org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1401)
+	at org.apache.commons.mail.Email.send(Email.java:1428)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:61)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:41)
+	at com.jbooktrader.platform.trader.Trader.error(Trader.java:216)
+	at com.ib.client.EClientSocket.error(EClientSocket.java:1890)
+	at com.ib.client.EReader.processMsg(EReader.java:331)
+	at com.ib.client.EReader.run(EReader.java:69)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 w67sm3908803qgw.41 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1391)
+	... 7 more
+</td></tr>
+</table><br><table border="1" cellpadding="2" cellspacing="0" width=100%>
+<tr><TH WIDTH="80">Date</th><TH WIDTH="120">Time</th><TH WIDTH="130">Reporter</th><th>Message</th></tr>
+<tr><td>07/09/15</td><td>15:45:11.428</td><td>JBookTrader</td><td>New Report Started. JBookTrader version 9.01</td></tr>
+<tr><td>07/09/15</td><td>15:45:11.441</td><td>JBookTrader</td><td>All times will be reported in the local time zone: America/Montreal, Heure normale de l'Est</td></tr>
+<tr><td>07/09/15</td><td>15:45:22.948</td><td>JBookTrader</td><td>Time host: pool.ntp.org, name: 206.108.0.132, stratum: 2, type: NTP, precision: 7.6294 microseconds</td></tr>
+<tr><td>07/09/15</td><td>15:45:22.948</td><td>JBookTrader</td><td>NTP clock updated. Offset: 90 ms</td></tr>
+<tr><td>07/09/15</td><td>15:45:22.961</td><td>JBookTrader</td><td>Running mode changed to: Forward Testing</td></tr>
+<tr><td>07/09/15</td><td>15:45:23.051</td><td>JBookTrader</td><td>Connecting to TWS</td></tr>
+<tr><td>07/09/15</td><td>15:45:23.109</td><td>IB API</td><td>2104: Market data farm connection is OK:usfuture</td></tr>
+<tr><td>07/09/15</td><td>15:45:23.110</td><td>IB API</td><td>2104: Market data farm connection is OK:cashfarm</td></tr>
+<tr><td>07/09/15</td><td>15:45:23.118</td><td>IB API</td><td>2104: Market data farm connection is OK:cafarm</td></tr>
+<tr><td>07/09/15</td><td>15:45:23.119</td><td>IB API</td><td>2104: Market data farm connection is OK:usfarm.us</td></tr>
+<tr><td>07/09/15</td><td>15:45:23.120</td><td>JBookTrader</td><td>Connected to TWS</td></tr>
+<tr><td>07/09/15</td><td>15:45:23.120</td><td>IB API</td><td>2104: Market data farm connection is OK:usfarm</td></tr>
+<tr><td>07/09/15</td><td>15:45:23.120</td><td>IB API</td><td>2106: HMDS data farm connection is OK:cashhmds</td></tr>
+<tr><td>07/09/15</td><td>15:45:23.122</td><td>IB API</td><td>2106: HMDS data farm connection is OK:ushmds</td></tr>
+<tr><td>07/09/15</td><td>15:45:23.128</td><td>IB API</td><td>Msg ID: 1436416249 Msg Type: 1 Msg: ======================================================
+To HKFE,SEHK traders:
+Thu Jul  9 11:36:08 2015 EST
+HKEx has announced that there will be no after hours futures trading in its market today due to the issuance of Typhoon Signal No 8.
+For trading arrangement for HKFE and SEHK, please refer to the following HKEx website link:
+http://www.hkex.com.hk/eng/market/typhoons/tradingarrangement.htm
+For more details regarding weather conditions in Hong Kong, please refer to the HK observatory website for updates:
+http://www.weather.gov.hk/contente.htm Exchange: HKFE,SEHK</td></tr>
+<tr><td>07/09/15</td><td>15:45:23.129</td><td>IB API</td><td>Msg ID: 1436428780 Msg Type: 1 Msg: ======================================================
+To SGX traders:
+Thu Jul  9 11:59:14 2015 EST
+Due to a typhoon and the closure of the underlying market in Taiwan, SGX will close the MSCI Taiwan Index Future & Option markets for both T and T+1 sessions on 10 July 2015. Exchange: SGX</td></tr>
+<tr><td>07/09/15</td><td>15:45:23.163</td><td>IB API</td><td>2100: API client has been unsubscribed from account data.</td></tr>
+<tr><td>07/09/15</td><td>15:45:23.312</td><td>JBookTrader</td><td>Monitoring server started</td></tr>
+<tr><td>07/09/15</td><td>15:45:23.316</td><td>JBookTrader</td><td>Requested contract details for instrument QQQ-SMART-STK</td></tr>
+<tr><td>07/09/15</td><td>15:45:23.317</td><td>JBookTrader</td><td>Requested book data for instrument QQQ-SMART-STK</td></tr>
+<tr><td>07/09/15</td><td>15:45:23.324</td><td>JBookTrader</td><td>Requested market data for instrument QQQ-SMART-STK</td></tr>
+<tr><td>07/09/15</td><td>15:45:23.328</td><td>Test</td><td>Strategy started. Trading schedule: 10:20 to 15:25 (America/New_York)</td></tr>
+<tr><td>07/09/15</td><td>15:45:23.368</td><td>IB API</td><td>Contract details:<br>ID: 2<br>Trading class: NMS<br>Exchanges: SMART,CBOE,ISE,CHX,ARCA,ISLAND,IBSX,DRCTEDGE,BEX,BATS,EDGEA,LAVA,CSFBALGO,JEFFALGO,BYX,IEX,PSX<br>Long name: POWERSHARES QQQ TRUST SERIES<br>Market name: NMS<br>Minimum tick: 0.01<br>Contract month: null<br>Time zone id: EST5EDT<br>Trading hours: 20150709:0400-2000;20150710:0400-2000<br>Liquid hours: 20150709:0930-1600;20150710:0930-1600<br></td></tr>
+<tr><td>07/09/15</td><td>15:45:23.391</td><td>IB API</td><td>10092: Deep market data is not supported for this combination of security type/exchange (for id 2)</td></tr>
+<tr><td>07/09/15</td><td>15:45:24.681</td><td>JBookTrader</td><td>org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1401)
+	at org.apache.commons.mail.Email.send(Email.java:1428)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:61)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:41)
+	at com.jbooktrader.platform.trader.Trader.error(Trader.java:216)
+	at com.ib.client.EClientSocket.error(EClientSocket.java:1890)
+	at com.ib.client.EReader.processMsg(EReader.java:331)
+	at com.ib.client.EReader.run(EReader.java:69)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 o64sm3908550qko.49 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1391)
+	... 7 more
+</td></tr>
+<tr><td>07/09/15</td><td>15:45:24.681</td><td>IB API</td><td>354: Requested market data is not subscribed.Error&BEST/STK/Top&BEST/STK/Top (for id 2)</td></tr>
+<tr><td>07/09/15</td><td>15:45:25.042</td><td>JBookTrader</td><td>org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1401)
+	at org.apache.commons.mail.Email.send(Email.java:1428)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:61)
+	at com.jbooktrader.platform.email.Notifier.send(Notifier.java:41)
+	at com.jbooktrader.platform.trader.Trader.error(Trader.java:216)
+	at com.ib.client.EClientSocket.error(EClientSocket.java:1890)
+	at com.ib.client.EReader.processMsg(EReader.java:331)
+	at com.ib.client.EReader.run(EReader.java:69)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 20sm3919365qkz.30 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1391)
+	... 7 more
+</td></tr>
+<tr><td>07/09/15</td><td>15:46:20.696</td><td>IB API</td><td>java.io.EOFException</td></tr>
